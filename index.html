@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="shortcut icon" href="favicon.ico">
+  <script src="weui/js/jquery.1.11.0.min.js"></script>
+  <script src="weui/js/jquery-weui.1.0.1.min.js"></script>
+  <script src="js/global.js"></script>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="weui/css/weui.1.1.1.min.css">
+  <link rel="stylesheet" href="weui/css/jquery-weui.1.0.1.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>建材商城</title>
+</head>
+<body ontouchstart="">
+  <header class="bar bar-nav">
+    <a href="select_city.html" class="icon pull-left fz17" data-cityname="福州市">福州 <i class="iconfont icon-unfold" aria-hidden="true"></i></a>
+    <h1 class="title fz0"><span class="address-input fz14" data-target="#pop-loca">选择位置</span></h1>
+    <a href="msg_list.html" class="icon pull-right">
+    	<span class="weui-badge cart-num" style="position: absolute;top: 5px;right: 0">18</span>
+    	<i class="iconfont icon-lingdang" style="margin-right: 10px;" aria-hidden="true"></i>
+    </a>
+  </header>
+  <script src="js/swiper-3.4.2.jquery.min.js"></script>
+  <script src="js/swiper.animate1.0.2.min.js"></script>
+  <!-- 公告栏 -->
+  <div class="notice bgf">
+    <div class="hd">公告</div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="news_show.html" class="ep fz14 c9">公告1公告1公告1公告1公告1公告1公告1公告1</a>
+        </div>
+        <div class="swiper-slide">
+          <a href="news_show.html" class="ep fz14 c9">公告2公告2公告2公告2公告2公告2公告2公告2</a>
+        </div>
+        <div class="swiper-slide">
+          <a href="news_show.html" class="ep fz14 c9">公告3公告3公告3公告3公告3公告3公告3公告3</a>
+        </div>
+      </div>
+    </div>
+    <div class="close">
+      <i class="iconfont icon-x" aria-hidden="true"></i>
+    </div>
+    <script>
+      // 公告轮播
+      var notice_swiper = new Swiper('.notice .swiper-container', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        autoplay : 3000,
+      });
+      // 关闭公告
+      $('.notice').one('click','.close',function () {
+        $('.notice').animate({height:"0"},function() {$(this).hide();});
+        $('.banner').animate({"padding-top":"0"})
+      });
+    </script>
+  </div>
+  
+  
+  <!-- 主体内容 -->
+  <div class="bar-tab-content">
+    <!-- 轮播 -->
+    <div class="swiper-container banner">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#"><img src="images/temp/banner1.jpg" class="cover"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="images/temp/banner2.jpg" class="cover"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="images/temp/banner3.jpg" class="cover"></a>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <script>
+        // 公告轮播
+        var banner_swiper = new Swiper('.swiper-container.banner', {
+          autoplay : 3000,
+          pagination : '.banner .swiper-pagination',
+        });
+      </script>
+    </div>
+    
+    
+    <!-- 搜索框 -->
+    <div class="search-box">
+      <form action="">
+        <input type="text" placeholder="请输入您要搜索的商品...">
+        <input type="image" src="data:image/gif;base64,R0lGODlhIgAiALMPAMfb7dfl8omz2JS63Orx+L7V6rPO5nyr1fr8/ePt9qvJ5KHC4IKv1/H2+nio0////yH5BAEAAA8ALAAAAAAiACIAAAT/8MlJUShrMDEMaFQoioTBOGiaHkswvpOhokc9OwsBh4SwKgBCA4EgBAy+FGAnSagMIBjghCrsCAeUIMGUIBZKWHKA6FJkKK5IoS2bKWwHg5TSvUMD1BKOMtzpcm4PCFkHfyNgDnsPASgKhyKNODEoLpAVJ3MSeQ5RlxOcUScHgp8PiZZZAqZnlRKZpZ9xlqGsEolqcWqsPqQSAFW2BCgDEw1atmhWoK6mWQ52EpKal2iPeI6Xkp2ADst324shwH3gKcUwaDi7LwjqDgffIwUqLbEPCSbnKfKRSSgMBiwwoGDAPz0PyDnwAwNBgYM3HHmiV24HAgALIAYsEI1SMDMNEQKITHCv1UdbISg6QDmPwYIIADs=">
+      </form>
+    </div>
+    
+    <!-- 分类小导航按钮 -->
+    <div class="weui-panel" style="padding-bottom: 10px;">
+      <div class="weui-flex">
+        <a href="item_category.html" class="weui-flex__item text-center">
+          <div class="b-r50 flex__icon">
+            <img src="images/icons/icon_t1.gif" class="cover b-r50">
+          </div>
+          <p class="flex__label">
+            辅材
+          </p>
+        </a>
+        <a href="item_category.html" class="weui-flex__item text-center">
+          <div class="b-r50 flex__icon">
+            <img src="images/icons/icon_t2.gif" class="cover b-r50">
+          </div>
+          <p class="flex__label">
+            主材
+          </p>
+        </a>
+        <a href="item_category.html" class="weui-flex__item text-center">
+          <div class="b-r50 flex__icon">
+            <img src="images/icons/icon_t3.gif" class="cover b-r50">
+          </div>
+          <p class="flex__label">
+            订制品
+          </p>
+        </a>
+        <a href="item_category.html" class="weui-flex__item text-center">
+          <div class="b-r50 flex__icon">
+            <img src="images/icons/icon_t4.gif" class="cover b-r50">
+          </div>
+          <p class="flex__label">
+            软装
+          </p>
+        </a>
+      </div>
+      <div class="weui-flex">
+        <a href="item_category.html" class="weui-flex__item text-center">
+          <div class="b-r50 flex__icon">
+            <img src="images/icons/icon_t5.gif" class="cover b-r50">
+          </div>
+          <p class="flex__label">
+            电器
+          </p>
+        </a>
+        <a href="item_category.html" class="weui-flex__item text-center">
+          <div class="b-r50 flex__icon">
+            <img src="images/icons/icon_t6.gif" class="cover b-r50">
+          </div>
+          <p class="flex__label">
+            智能家居
+          </p>
+        </a>
+        <a href="item_category.html" class="weui-flex__item text-center">
+          <div class="b-r50 flex__icon">
+            <img src="images/icons/icon_t7.gif" class="cover b-r50">
+          </div>
+          <p class="flex__label">
+            工艺品
+          </p>
+        </a>
+        <a href="item_category.html" class="weui-flex__item text-center">
+          <div class="b-r50 flex__icon">
+            <img src="images/icons/icon_t8.gif" class="cover b-r50">
+          </div>
+          <p class="flex__label">
+            其他
+          </p>
+        </a>
+      </div>
+    </div>
+    
+    
+    <!-- 新闻轮播 -->
+    <div class="weui-panel news-swiper bgf">
+      <div class="hd"><img src="images/icons/news_t.gif" class="contain" style="vertical-align: middle;"></div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="news_show.html" class="ep fz14 c9">新闻1新闻1新闻1新闻1新闻1新闻1新闻1新闻1</a></div>
+          <div class="swiper-slide"><a href="news_show.html" class="ep fz14 c9">新闻2新闻2新闻2新闻2新闻2新闻2新闻2新闻2</a></div>
+          <div class="swiper-slide"><a href="news_show.html" class="ep fz14 c9">新闻3新闻3新闻3新闻3新闻3新闻3新闻3新闻3</a></div>
+        </div>
+      </div>
+      <script>
+        // 新闻轮播
+        var news_swiper = new Swiper('.news-swiper .swiper-container', {
+          direction: 'vertical',
+          slidesPerView: 1,
+          autoplay : 3000,
+        });
+      </script>
+    </div>
+    
+    
+    <!-- 建材馆 -->
+    <div class="flex-box">
+      <a href="#" class="index-flex__img" style="background-image: url(images/temp/20177281101.jpg);">
+        <div class="index-flex__text">
+          <b style="color: #4990f8;">天天优惠</b>
+          <p class="c9 fz17">促销特价2折起</p>
+        </div>
+      </a>
+      <a href="#" class="index-flex__img" style="background-image: url(images/temp/20177281102.jpg);">
+        <div class="index-flex__text">
+          <b style="color: #fc9014;">品牌团</b>
+          <p class="c9 fz17">精选品牌 实惠好货</p>
+        </div>
+      </a>
+      <a href="#" class="index-flex__img" style="background-image: url(images/temp/20177281103.jpg);">
+        <div class="index-flex__text">
+          <b style="color: #f26667;">量贩优选</b>
+          <p class="c9 fz17">半价囤好货</p>
+        </div>
+      </a>
+      <a href="#" class="index-flex__img" style="background-image: url(images/temp/20177281104.jpg);">
+        <div class="index-flex__text">
+          <b style="color: #746ce5;">装备天地</b>
+          <p class="c9 fz17">这里，总有你要的</p>
+        </div>
+      </a>
+    </div>
+    
+    
+    
+    
+    <!-- 今日特惠 -->
+    <div class="weui-panel weui-panel_access">
+      <div class="weui-panel__hd fz17">
+        <i class="iconfont icon-time co" aria-hidden="true"></i>
+        今日惠购
+      </div>
+      <div class="weui-panel__bd item-list">
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072101.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <s class="samll c9">2000人付款</s></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072102.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <s class="samll c9">2000人付款</s></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072103.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <s class="samll c9">2000人付款</s></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072104.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <s class="samll c9">2000人付款</s></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- 广告 -->
+    <div class="ad ad-img">
+      <div class="swiper-container" id="ad1" style="height: 17vw;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#"><img src="images/temp/ad1.jpg" class="cover"></a></div>
+          <div class="swiper-slide"><a href="#"><img src="images/temp/banner2.jpg" class="cover"></a></div>
+          <div class="swiper-slide"><a href="#"><img src="images/temp/banner3.jpg" class="cover"></a></div>
+        </div>
+      </div>
+      <script>
+        var ad1_swiper_config = {autoplayDisableOnInteraction : false, effect : 'fade', autoplay : 5000};
+        var ad1_swiper = new Swiper('#ad1', ad1_swiper_config);
+      </script>
+    </div>
+    
+    
+    <!-- 为您推荐 -->
+    <div class="weui-panel weui-panel_access">
+      <div class="weui-panel__hd fz17">
+        <i class="iconfont icon-zan cp" aria-hidden="true"></i>
+        为您推荐
+      </div>
+      <div class="weui-panel__bd item-list">
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072101.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <s class="samll c9">2000人付款</s></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072102.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <s class="samll c9">2000人付款</s></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072103.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <s class="samll c9">2000人付款</s></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072104.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <s class="samll c9">2000人付款</s></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- 广告 -->
+    <div class="ad ad-img">
+      <div class="swiper-container" id="ad2" style="height: 17vw;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#"><img src="images/temp/ad1.jpg" class="cover"></a></div>
+        </div>
+      </div>
+      <script>
+        // 广告轮播
+        var ad2_swiper = new Swiper('#ad2', ad1_swiper_config);
+      </script>
+    </div>
+    
+    <!-- 积分专享 -->
+    <div class="weui-panel weui-panel_access">
+      <div class="weui-panel__hd fz17">
+        <i class="iconfont icon-jifen1 co" aria-hidden="true"></i>
+        积分专享
+      </div>
+      <div class="weui-panel__bd item-list">
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072101.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <span class="co">+ 2000积分</span></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072102.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <span class="co">+ 2000积分</span></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072103.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <span class="co">+ 2000积分</span></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072104.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <span class="co">+ 2000积分</span></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="weui-panel__ft">
+        <a href="integralitem_list.html" class="weui-cell weui-cell_access weui-cell_link">
+          <div class="weui-cell__bd">查看更多</div>
+          <span class="weui-cell__ft"></span>
+        </a>
+      </div>
+    </div>
+    
+    <!-- 猜你喜欢 -->
+    <div class="weui-panel weui-panel_access">
+      <div class="weui-panel__hd fz17">
+        <div class="weui-loadmore weui-loadmore_line you-like__it">
+          <span class="weui-loadmore__tips">
+            <i class="iconfont icon-like fz16 co"></i>
+            猜你喜欢
+          </span>
+        </div>
+      </div>
+      <div class="weui-panel__bd item-list">
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072101.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <s class="samll c9">2000人付款</s></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072102.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <s class="samll c9">2000人付款</s></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072103.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <s class="samll c9">2000人付款</s></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+        <div class="item-card">
+          <a href="item_show.html" class="item-img">
+            <img src="images/temp/2017072104.jpg" alt="" class="cover">
+          </a>
+          <div class="item-info">
+            <p class="name">皇家高级地装客厅砖</p>
+            <p class="price cb fz14">￥100 <s class="samll c9">2000人付款</s></p>
+          </div>
+          <a href="#" class="item-buy b-r50"><i class="iconfont icon-buy cf fz24" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- 地图选地点层 -->
+  <div id="pop-loca" class="weui-popup__container">
+    <div class="weui-popup__overlay"></div>
+    <div class="weui-popup__modal">
+      <div id="baidu-map" style="height: 60vw;"></div>
+      <div class="weui-search-bar bgf" id="searchBar">
+        <div class="weui-search-bar__form bgf">
+          <div class="weui-search-bar__box">
+            <i class="weui-icon-search"></i>
+            <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+            <a href="javascript:" class="weui-icon-clear"></a>
+          </div>
+          <label class="weui-search-bar__label" id="searchText">
+            <i class="weui-icon-search"></i>
+            <span>搜索</span>
+          </label>
+        </div>
+        <a href="javascript:" class="weui-search-bar__cancel-btn" style="color: #333;" id="searchCancel">取消</a>
+      </div>
+      <div class="weui-panel weui-panel_access" id="r-result">
+      </div>
+    </div>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=T78mt7xnV988fhGTVme9MGnuBp24pwkv"></script>
+    <script>
+      // 百度地图API功能
+      var map = new BMap.Map("baidu-map");
+      var local = new BMap.LocalSearch(map, {
+        onSearchComplete: function(results){
+          // 判断状态是否正确
+          if (local.getStatus() == BMAP_STATUS_SUCCESS){
+            var s = [];
+            for (var i = 0; i < results.getCurrentNumPois(); i ++){
+              s.push([
+                '<div class="weui-media-box weui-media-box_text" data-title="{title}" data-address="{address}">',
+                  '<h4 class="weui-media-box__title">{title}</h4>',
+                  '<p class="weui-media-box__desc">{address}</p>',
+                '</div>'
+              ].join('').format(results.getPoi(i)));
+            }
+            document.getElementById("r-result").innerHTML = s.join("");
+            $.hideLoading();
+          }
+        }
+      });
+      $(document).on('click','.address-input',function () {
+        $("#pop-loca").popup();
+        map.centerAndZoom($('[data-cityname]').data('cityname'),12);
+      });
+      $(document).on('change','#searchInput',function(){
+        $.showLoading();
+        local.search($(this).val());
+      });
+      $(document).on('click','[data-address]',function () {
+        $('.address-input').html('{0}-{1}'.format($(this).data('title'),$(this).data('address')));
+        // 这里写一个更改详细地址的请求
+        $.closePopup();
+      })
+    </script>
+  </div>
+  
+  
+  <!-- 底部导航栏 -->
+  <div class="weui-tabbar">
+    <a href="find_worker.html" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon">
+        <i class="iconfont icon-gongren" aria-hidden="true"></i>
+      </div>
+      <p class="weui-tabbar__label">找工匠</p>
+    </a>
+    <a href="show_off_order.html" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon">
+        <i class="iconfont icon-shaidan" aria-hidden="true"></i>
+      </div>
+      <p class="weui-tabbar__label">晒单</p>
+    </a>
+    <a href="index.html" class="weui-tabbar__item  weui-bar__item--on">
+      <div class="weui-tabbar__icon">
+        <i class="iconfont icon-mall-c" aria-hidden="true"></i>
+      </div>
+      <p class="weui-tabbar__label">建材商城</p>
+    </a>
+    <a href="shop_cart.html" class="weui-tabbar__item">
+      <span class="weui-badge cart-num" style="position: absolute;top: -.4em;right: 1em;">8</span><!-- 购物车内商品数 -->
+      <div class="weui-tabbar__icon">
+        <i class="iconfont icon-cart" aria-hidden="true"></i>
+      </div>
+      <p class="weui-tabbar__label">购物车</p>
+    </a>
+    <a href="user/user_center.html" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon">
+        <i class="iconfont icon-user-c" aria-hidden="true"></i>
+      </div>
+      <p class="weui-tabbar__label">个人中心</p>
+    </a>
+  </div>
+  <!-- 返回顶部按钮 -->
+  <div class="to-top"><script>$(function() {$('.to-top').toTop();});</script></div>
+  <script src="weui/js/fastclick.js"></script>
+  <script>
+    $(function() {
+      FastClick.attach(document.body);
+    });
+  </script>
+</body>
+</html>
