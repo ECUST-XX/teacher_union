@@ -269,7 +269,6 @@
 	background-repeat: no-repeat;
 			background-size: cover;
 	-webkit-background-size: cover;
-	background-image: url(../images/vip_card_bg.jpg);
 }
 .vip__hd .vip-card {
 	width: 100%;

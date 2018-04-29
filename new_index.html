@@ -19,12 +19,28 @@
     <script src="js/jquery-weui.1.0.1.min.js"></script>
     <script src="js/global.js"></script>
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/weui.1.1.1.min.css">
+    <link rel="stylesheet" href="css/weui.min.css">
     <link rel="stylesheet" href="css/jquery-weui.1.0.1.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>首页</title>
+    <script src="images/icons/iconfont/iconfont.js"></script>
+    <style type="text/css">
+        .icon {
+            /* 通过设置 font-size 来改变图标大小 */
+            font-size: 30px;
+            width: 1em;
+            height: 1em;
+            /*!* 图标和文字相邻时，垂直对齐 *!*/
+            vertical-align: -0.15em;
+            /* 通过设置 color 来改变 SVG 的颜色/fill */
+            fill: currentColor;
+            /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+               normalize.css 中也包含这行 */
+            overflow: hidden;
+        }
+    </style>
 </head>
+
 <body ontouchstart="">
 <header class="bar bar-nav">
     <h1 class="title fz0"><span class=" fz24">服务大厅</span></h1>
@@ -49,74 +65,92 @@
     </div>
 
     <!--九宫格-->
-    <div class="weui-grids" style="padding-top: 3rem;">
-        <a href="" class="weui-grid ">
-            <div class="weui-grid__icon fa-2x">
-                <i class="fa  fa-comments-o fa-inverse" aria-hidden="true"></i>
+    <div class="weui-grids" style="margin-top: 1rem; background-color: #fafafa">
+        <a href="" class="weui-grid js_grid">
+            <div class="weui-grid__icon">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-minzhupingyi"></use>
+                </svg>
             </div>
             <p class="weui-grid__label">
                 民主管理
             </p>
         </a>
-        <a href="" class="weui-grid ">
+        <a href="" class="weui-grid js_grid">
             <div class="weui-grid__icon">
-                <i class="fa  fa-gavel fa-inverse" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zhishichanquan_dianshangweiquan"></use>
+                </svg>
             </div>
             <p class="weui-grid__label">
                 维权帮扶
             </p>
         </a>
-        <a href="" class="weui-grid ">
+        <a href="" class="weui-grid js_grid">
             <div class="weui-grid__icon">
-                <i class="fa  fa-handshake-o fa-inverse" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-xueshengzonghesuzhipingjia"></use>
+                </svg>
             </div>
             <p class="weui-grid__label">
                 素质建设
             </p>
         </a>
-        <a href="" class="weui-grid ">
+        <a href="" class="weui-grid js_grid">
             <div class="weui-grid__icon">
-                <i class="fa  fa-male fa-inverse" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zonghesuzhipingjiachuzhongban"></use>
+                </svg>
             </div>
             <p class="weui-grid__label">
                 自身建设
             </p>
         </a>
-        <a href="" class="weui-grid ">
+        <a href="" class="weui-grid js_grid">
             <div class="weui-grid__icon">
-                <i class="fa fa-joomla fa-inverse" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-wxbpinpaibao"></use>
+                </svg>
             </div>
             <p class="weui-grid__label">
                 品牌活动
             </p>
         </a>
-        <a href="" class="weui-grid ">
+        <a href="" class="weui-grid js_grid">
             <div class="weui-grid__icon">
-                <i class="fa fa-gavel fa-inverse" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-minzhupingyi1"></use>
+                </svg>
             </div>
             <p class="weui-grid__label">
                 部门工会
             </p>
         </a>
-        <a href="" class="weui-grid ">
+        <a href="" class="weui-grid js_grid">
             <div class="weui-grid__icon">
-                <i class="fa fa-map-marker fa-inverse" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-yuyue"></use>
+                </svg>
             </div>
             <p class="weui-grid__label">
                 场所预约
             </p>
         </a>
-        <a href="" class="weui-grid ">
+        <a href="" class="weui-grid js_grid">
             <div class="weui-grid__icon">
-                <i class="fa fa-users fa-inverse" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-ruhuidianjihou"></use>
+                </svg>
             </div>
             <p class="weui-grid__label">
                 我要入会
             </p>
         </a>
-        <a href="" class="weui-grid ">
+        <a href="" class="weui-grid js_grid">
             <div class="weui-grid__icon">
-                <i class="fa fa-volume-control-phone fa-inverse" aria-hidden="true"></i>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-lianxi"></use>
+                </svg>
             </div>
             <p class="weui-grid__label">
                 联系我们
@@ -131,25 +165,33 @@
 <div class="weui-tabbar">
     <a href="#" class="weui-tabbar__item">
         <div class="weui-tabbar__icon">
-            <i class="fa fa-home" aria-hidden="true"></i>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-shouye1"></use>
+            </svg>
         </div>
         <p class="weui-tabbar__label">首页</p>
     </a>
     <a href="#" class="weui-tabbar__item  weui-bar__item">
         <div class="weui-tabbar__icon">
-            <i class="fa  fa-calendar-o" aria-hidden="true"></i>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-huodong"></use>
+            </svg>
         </div>
         <p class="weui-tabbar__label">活动专区</p>
     </a>
     <a href="new_index.html" class="weui-tabbar__item">
         <div class="weui-tabbar__icon">
-            <i class="fa fa-server" aria-hidden="true"></i>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-fuwu"></use>
+            </svg>
         </div>
         <p class="weui-tabbar__label">服务大厅</p>
     </a>
     <a href="new_user.html" class="weui-tabbar__item">
         <div class="weui-tabbar__icon">
-            <i class="fa  fa-user " aria-hidden="true"></i>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-huiyuan"></use>
+            </svg>
         </div>
         <p class="weui-tabbar__label">会员中心</p>
     </a>
@@ -171,6 +213,20 @@
     var banner_swiper = new Swiper('.swiper-container', {
         autoplay: 2000,
         pagination: '.swiper-pagination',
+    });
+</script>
+
+<!--网格正方形修复-->
+<script>
+    $(document).ready(function(){
+        var ob = $('.weui-grid');
+        var w = parseInt(ob.css("width"));
+        var h = parseInt(ob.css("height"));
+        if (w/h>1.2) {
+            ob.css("padding-top","30px");
+            ob.css("padding-bottom","30px");
+        }
+
     });
 </script>
 </body>
