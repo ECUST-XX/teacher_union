@@ -20,7 +20,23 @@
     <link rel="stylesheet" href="css/jquery-weui.1.0.1.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>首页</title>
+    <title>票务系统</title>
+    <style>
+        .show__infos {
+            padding: 15px;
+        }
+
+        .show__info {
+            font-size: 15px;
+        }
+
+        .show__info p {
+            padding: 0px;
+            margin: 0px;
+            display: inline;
+        }
+
+    </style>
 </head>
 <body ontouchstart="">
 <header class="bar bar-nav">
@@ -30,41 +46,45 @@
 
 <!-- 主体内容 -->
 <div class="bar-tab-content">
-    <!-- 轮播图 -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <a href="#"><img src="images/temp/banner1.jpg" class="cover"></a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#"><img src="images/temp/banner2.jpg" class="cover"></a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#"><img src="images/temp/banner3.jpg" class="cover"></a>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
+    <!--背景图片-->
+    <div style="height: 180px;background:url('./images/temp/llg.jpg') no-repeat center;">
     </div>
 
     <div class="weui-panel weui-panel_access" style="margin-top: 0">
-            <div class="weui-panel__bd">
-                <div class="weui-media-box weui-media-box_text">
-                    <h4 class="weui-media-box__title">演出名称</h4>
-                    <p class="weui-media-box__desc">具体信息：2017“壹戏剧大赏”华语地区最佳小剧场戏剧奖作品</p>
-                    <p class="weui-media-box__desc">简介：英国当代著名作品《呼吸》中文版</p>
-                    <p class="weui-media-box__desc">备注：123456</p>
-                    <ul class="weui-media-box__info">
-                        <li class="weui-media-box__info__meta">时间</li>
-                        <li class="weui-media-box__info__meta">地点</li>
-                        <li class="weui-media-box__info__meta">地址</li>
-                    </ul>
-                </div>
+        <div class="weui-panel__bd">
+            <div class="weui-media-box weui-media-box_text">
+                <h4 class="weui-media-box__title">演出名称</h4>
+                <p class="weui-media-box__desc">具体信息：2017“壹戏剧大赏”华语地区最佳小剧场戏剧奖作品</p>
+                <p class="weui-media-box__desc">简介：英国当代著名作品《呼吸》中文版</p>
+                <p class="weui-media-box__desc">备注：123456</p>
             </div>
+        </div>
     </div>
 
+    <div style="margin-bottom: 2.5rem; margin-top: 1rem">
+        <ul class="show__infos">
+            <li class="show__info"><p style="font-weight: bold">演出时间: </p>
+                <p style="color: red">2018年4月26日(周四) 19:30</p></li>
+            <li class="show__info">
+                <div style="float: left"><p style="font-weight: bold">演出地点: </p></div>
+                <div style="float: left;">
+                    <p style="display: block">上海大剧院</p>
+                    <p>上海市人民广场</p>
+                </div>
 
+            </li>
+        </ul>
+    </div>
+    <div style="padding: 15px">
+        <a id="deadline_button" href="javascript:;" class="weui-btn weui-btn_warn" style="clear: both">
+            <p style="padding:0px; margin:0px; font-size: 13px; line-height: 2">
+                距离话剧开抢还剩
+            </p>
+            <p id="deadline" style="padding:0px; margin:0px; font-size: 18px; font-weight: bold; line-height: 1.5">
+            </p>
+        </a>
+    </div>
 
-    <!--九宫格-->
 
 </div>
 
@@ -80,10 +100,33 @@
 </script>
 
 <script>
-    // 公告轮播
-    var banner_swiper = new Swiper('.swiper-container', {
-        autoplay: 2000,
-        pagination: '.swiper-pagination',
+    var now = Date.parse(new Date());
+    var deadline = now + 3;
+    var intDiff = deadline - now; //倒计时总秒数量
+    function timer(intDiff) {
+        window.setInterval(function () {
+            var day = 0,
+                hour = 0,
+                minute = 0,
+                second = 0;//时间默认值
+            if (intDiff > 0) {
+                day = Math.floor(intDiff / (60 * 60 * 24));
+                hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+                minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+                second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+            }
+            if (minute <= 9) minute = '0' + minute;
+            if (second <= 9) second = '0' + second;
+            $('#deadline').html(day + "天" + hour + '时' + minute + '分' + second + '秒');
+            intDiff--;
+            if (intDiff === 0) {
+                $('#deadline_button').html("立即开始！");
+            }
+        }, 1000);
+    }
+
+    $(function () {
+        timer(intDiff);
     });
 </script>
 </body>
