@@ -1,0 +1,31 @@
+.top-content {
+  color:white;
+  height:20vw;
+}
+
+.top {
+  background-color: black;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  height:10vw;
+  text-align: center;
+}
+
+.left {
+  position: absolute;
+  left: 10%;
+  color:white;
+}
+
+.right {
+  position: absolute;
+  right: 10%;
+  color:white;
+}
+
+.medium {
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+}
