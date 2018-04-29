@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+      <script src="bootstrap/js/bootstrap.min.js"></script> -->
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="js/jquery.1.11.0.min.js"></script>
+    <script src="js/jquery-weui.1.0.1.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/swiper-3.4.2.jquery.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/weui.1.1.1.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.1.0.1.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>活动中心</title>
+</head>
+<body ontouchstart="">
+<header class="bar bar-nav">
+    <h1 class="title fz0"><span class=" fz24">最新活动安排</span></h1>
+</header>
+
+<!-- 主体内容 -->
+<div class="bar-tab-content">
+    <div class="weui-tab">
+        <div class="weui-navbar" style="  z-index:0;">
+            <select class="weui-navbar__item" style="-webkit-flex:0;border: 0">
+                <option selected vaule="1">徐汇</option>
+                <option vaule="2">奉贤</option>
+                <option vaule="3">金山</option>
+            </select>
+            <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+                正在进行
+            </a>
+            <a class="weui-navbar__item" href="#tab2">
+                即将开展
+            </a>
+            <a class="weui-navbar__item" href="#tab3">
+                已完成
+            </a>
+        </div>
+        <div class="weui-tab__bd">
+            <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                <!--搜索框-->
+                <div class="search-box">
+                    <form action="">
+                        <div>
+                            <input class="form-control" type="text" placeholder="请输入您要搜索内容...">
+                            <button type='submit'><i class="weui-icon-search" style="font-size:25px;"></i></button>
+                        </div>
+                    </form>
+                </div>
+
+                <!--轮播图-->
+                <div class="swiper-container banner" style="padding-top: 0">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="images/temp/banner1.jpg" class="cover"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="images/temp/banner2.jpg" class="cover"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="images/temp/banner3.jpg" class="cover"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <script>
+                        // 公告轮播
+                        var banner_swiper = new Swiper('.swiper-container.banner', {
+                            autoplay: 2000,
+                            pagination: '.banner .swiper-pagination',
+                        });
+                    </script>
+                </div>
+                <!--图文内容-->
+                <div class="weui-panel weui-panel_access" style="margin-top: 0;">
+                    <div class="weui-panel__bd">
+                        <div class="weui-media-box weui-media-box_appmsg">
+                            <div class="weui-media-box__hd">
+                                <img class="weui-media-box__thumb" src="images/temp/llg.jpg">
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title">标题一</h4>
+                                <p class="weui-media-box__desc">内容一</p>
+                                <p class="weui-media-box__desc">内容二</p>
+                                <p class="weui-media-box__desc">内容三 </p>
+                            </div>
+                            <div class="weui-media-box__bd" style="margin-top: 50px">
+                                <button class="weui-btn weui-btn_mini weui-btn_primary"
+                                        style="float: right;background-color:#e64340">抢票
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="weui-media-box weui-media-box_appmsg">
+                            <div class="weui-media-box__hd">
+                                <img class="weui-media-box__thumb" src="images/temp/llg.jpg">
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title">标题一</h4>
+                                <p class="weui-media-box__desc">内容一</p>
+                                <p class="weui-media-box__desc">内容二</p>
+                                <p class="weui-media-box__desc">内容三 </p>
+                            </div>
+                            <div class="weui-media-box__bd" style="margin-top: 50px">
+                                <button class="weui-btn weui-btn_mini weui-btn_primary"
+                                        style="float: right;background-color:#e64340">抢票
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="weui-media-box weui-media-box_appmsg">
+                            <div class="weui-media-box__hd">
+                                <img class="weui-media-box__thumb" src="images/temp/llg.jpg">
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title">标题一</h4>
+                                <p class="weui-media-box__desc">内容一</p>
+                                <p class="weui-media-box__desc">内容二</p>
+                                <p class="weui-media-box__desc">内容三 </p>
+                            </div>
+                            <div class="weui-media-box__bd" style="margin-top: 50px">
+                                <button class="weui-btn weui-btn_mini weui-btn_primary"
+                                        style="float: right;background-color:#e64340">抢票
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="weui-media-box weui-media-box_appmsg">
+                            <div class="weui-media-box__hd">
+                                <img class="weui-media-box__thumb" src="images/temp/llg.jpg">
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title">标题一</h4>
+                                <p class="weui-media-box__desc">内容一</p>
+                                <p class="weui-media-box__desc">内容二</p>
+                                <p class="weui-media-box__desc">内容三 </p>
+                            </div>
+                            <div class="weui-media-box__bd" style="margin-top: 50px">
+                                <button class="weui-btn weui-btn_mini weui-btn_primary"
+                                        style="float: right;background-color:#e64340">抢票
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="weui-media-box weui-media-box_appmsg">
+                            <div class="weui-media-box__hd">
+                                <img class="weui-media-box__thumb" src="images/temp/llg.jpg">
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title">标题一</h4>
+                                <p class="weui-media-box__desc">内容一</p>
+                                <p class="weui-media-box__desc">内容二</p>
+                                <p class="weui-media-box__desc">内容三 </p>
+                            </div>
+                            <div class="weui-media-box__bd" style="margin-top: 50px">
+                                <button class="weui-btn weui-btn_mini weui-btn_primary"
+                                        style="float: right;background-color:#e64340">抢票
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="tab2" class="weui-tab__bd-item">
+                <h1>页面二</h1>
+            </div>
+            <div id="tab3" class="weui-tab__bd-item">
+                <h1>页面三</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 底部导航栏 -->
+<div class="weui-tabbar">
+    <a href="#" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </div>
+        <p class="weui-tabbar__label">首页</p>
+    </a>
+    <a href="#" class="weui-tabbar__item  weui-bar__item">
+        <div class="weui-tabbar__icon">
+            <i class="fa  fa-calendar-o" aria-hidden="true"></i>
+        </div>
+        <p class="weui-tabbar__label">活动专区</p>
+    </a>
+    <a href="new_index.html" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+            <i class="fa fa-server" aria-hidden="true"></i>
+        </div>
+        <p class="weui-tabbar__label">服务大厅</p>
+    </a>
+    <a href="new_user.html" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+            <i class="fa  fa-user " aria-hidden="true"></i>
+        </div>
+        <p class="weui-tabbar__label">会员中心</p>
+    </a>
+</div>
+
+<!-- 返回顶部按钮 -->
+<div class="to-top">
+    <script>$(function () {
+        $('.to-top').toTop();
+    });</script>
+</div>
+
+<script src="js/fastclick.js"></script>
+<script>
+    $(function () {
+        FastClick.attach(document.body);
+    });
+</script>
+</body>
+</html>
