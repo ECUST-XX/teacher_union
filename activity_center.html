@@ -23,9 +23,24 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/weui.1.1.1.min.css">
     <link rel="stylesheet" href="css/jquery-weui.1.0.1.min.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>活动中心</title>
+    <script src="images/icons/iconfont/iconfont.js"></script>
+    <style type="text/css">
+        .icon {
+            /* 通过设置 font-size 来改变图标大小 */
+            font-size: 30px;
+            width: 1em;
+            height: 1em;
+            /*!* 图标和文字相邻时，垂直对齐 *!*/
+            vertical-align: -0.15em;
+            /* 通过设置 color 来改变 SVG 的颜色/fill */
+            fill: currentColor;
+            /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+               normalize.css 中也包含这行 */
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body ontouchstart="">
 <header class="bar bar-nav">
@@ -192,25 +207,33 @@
 <div class="weui-tabbar">
     <a href="#" class="weui-tabbar__item">
         <div class="weui-tabbar__icon">
-            <i class="fa fa-home" aria-hidden="true"></i>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-shouye1"></use>
+            </svg>
         </div>
         <p class="weui-tabbar__label">首页</p>
     </a>
-    <a href="activity_center.html" class="weui-tabbar__item  weui-bar__item--on">
+    <a href="activity_center.html" class="weui-tabbar__item">
         <div class="weui-tabbar__icon">
-            <i class="fa  fa-calendar-o" aria-hidden="true"></i>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-huodong"></use>
+            </svg>
         </div>
         <p class="weui-tabbar__label">活动专区</p>
     </a>
-    <a href="service_centre.html" class="weui-tabbar__item">
+    <a href="service_centre.html" class="weui-tabbar__item weui-bar__item--on">
         <div class="weui-tabbar__icon">
-            <i class="fa fa-server" aria-hidden="true"></i>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-fuwu"></use>
+            </svg>
         </div>
         <p class="weui-tabbar__label">服务大厅</p>
     </a>
     <a href="user_center.html" class="weui-tabbar__item">
         <div class="weui-tabbar__icon">
-            <i class="fa  fa-user " aria-hidden="true"></i>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-huiyuan"></use>
+            </svg>
         </div>
         <p class="weui-tabbar__label">会员中心</p>
     </a>
