@@ -179,21 +179,26 @@
 <script>
     function getTickets (obj) {
         if (! $(obj).hasClass("weui-btn_disabled")) {
+            var btn = $('#deadline_button');
             $.ajax({
                 url: "https://www.google.com",
                 data: "data",
+                type: "json",
                 beforeSend: function () {
+                    btn.html("正在抢票").addClass("weui-btn_disabled");
                     $.showLoading("正在抢票中");
                 },
                 success: function(data){
                     if (data == "OK") {
                         $.hideLoading();
                         $.toast("抢票成功");
+                        btn.html("抢票完成");
                     }
                 },
                 error: function (data) {
                     $.hideLoading();
                     $.toast("抢票失败","cancel");
+                    btn.html("再次尝试").removeClass("weui-btn_disabled");
                 }
             });
         }
