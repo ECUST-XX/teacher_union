@@ -76,9 +76,14 @@
 .weui-bar__item--on .weui-tabbar__icon i {color: #3d9ff7;}
 
 /*九宫格图标样式*/
-.weui-grid__icon {line-height: 35px;}
-.weui-grid__icon i {font-size: 35px;     color:#0099FF;}
 
+/*div图片背景展示*/
+.div_img {
+	height: 180px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
 /* toTop */
 .to-top {
 	width: 40px;
