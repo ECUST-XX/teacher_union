@@ -57,6 +57,16 @@
                 <p class="weui-media-box__desc">具体信息：2017“壹戏剧大赏”华语地区最佳小剧场戏剧奖作品</p>
                 <p class="weui-media-box__desc">简介：英国当代著名作品《呼吸》中文版</p>
                 <p class="weui-media-box__desc">备注：123456</p>
+                <p class="weui-media-box__desc" style="text-align: center"><i onclick="hidden_down(this,'hidden_desc')" class="fa fa-angle-down" style="font-size: 20px;"></i></p>
+                <div style="display: none" id="hidden_desc">
+                    <p class="weui-media-box__desc" >备注：123456</p>
+                    <p class="weui-media-box__desc" >备注：123456</p>
+                    <p class="weui-media-box__desc" >备注：123456</p>
+                    <p class="weui-media-box__desc" >备注：123456</p>
+                    <p class="weui-media-box__desc" >备注：123456</p>
+                    <p class="weui-media-box__desc" >备注：123456</p>
+                </div>
+
             </div>
         </div>
     </div>
@@ -128,6 +138,19 @@
     $(function () {
         timer(intDiff);
     });
+
+
+    function hidden_down(obj,hiddenid){
+        if(document.getElementById(hiddenid).style.display == 'none'){
+            obj.className = 'fa fa-angle-up';
+            document.getElementById(hiddenid).style.display='block';
+        } else {
+            obj.className = 'fa fa-angle-down';
+            document.getElementById(hiddenid).style.display='none';
+        }
+    }
+
+
 </script>
 </body>
 </html>
