@@ -95,11 +95,10 @@
             </a>
         </div>
         <span class="fenge"></span>
-        <div class="weui-flex__item" style="text-align: center">
-            <a href="#">
+        <div class="weui-flex__item open-popup" data-target="#show_detail" style="text-align: center">
                 <i class="fa fa-file-text-o"></i>
                 兑换记录
-            </a>
+
         </div>
     </div>
 
@@ -155,6 +154,37 @@
         </div>
 
     </div>
+
+    <div id="show_detail" class="weui-popup__container popup-bottom">
+        <div class="weui-popup__overlay"></div>
+        <div class="weui-popup__modal">
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>兑换时间</p>
+                    </div>
+                    <div class="weui-cell__ft">说明</div>
+                </div>
+
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>2014-5-6</p>
+                    </div>
+                    <div class="weui-cell__ft">兑换一个</div>
+                </div>
+
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>2014-5-6</p>
+                    </div>
+                    <div class="weui-cell__ft">兑换一个</div>
+                </div>
+
+                <a class="weui-btn weui-btn_primary close-popup">关闭页面</a>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <script src="js/fastclick.js"></script>
@@ -207,7 +237,6 @@
             document.getElementById(hiddenid).style.display = 'none';
         }
     }
-
 
 </script>
 <!--下拉刷新-->
