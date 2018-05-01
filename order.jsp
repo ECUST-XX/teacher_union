@@ -1,22 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-touch-fullscreen" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <link rel="shortcut icon" href="favicon.ico">
-  <script src="js/jquery.1.11.0.min.js"></script>
-  <script src="js/jquery-weui.1.0.1.min.js"></script>
-  <script src="js/global.js"></script>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/weui.min.css">
-  <link rel="stylesheet" href="css/jquery-weui.1.0.1.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <jsp:include page="head.jsp"></jsp:include>
+
   <title>预约项目</title>
 </head>
 <body ontouchstart="">
@@ -192,11 +178,7 @@
     </div>
     
   </div>
-  <script src="./js/fastclick.js"></script>
-  <script>
-    $(function() {
-      FastClick.attach(document.body);
-    });
-  </script>
-</body>
+  <jsp:include page="foot.jsp"></jsp:include>
+
+  </body>
 </html>

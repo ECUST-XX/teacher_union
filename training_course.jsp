@@ -1,26 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <jsp:include page="head.jsp"></jsp:include>
 
-    <link rel="shortcut icon" href="favicon.ico">
-    <script src="js/jquery.1.11.0.min.js"></script>
-    <script src="js/jquery-weui.1.0.1.min.js"></script>
-    <script src="js/global.js"></script>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/weui.min.css">
-    <link rel="stylesheet" href="css/jquery-weui.1.0.1.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/styles.css">
     <title>文体培训班</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <style>
         body {
             height: auto;
@@ -172,59 +156,9 @@
 
 </div>
 
-<script src="js/fastclick.js"></script>
-
-<!--取消延时-->
-<script>
-    $(function () {
-        FastClick.attach(document.body);
-    });
-</script>
-
-<script>
-    var now = Date.parse(new Date());
-    var deadline = now + 5;
-    var intDiff = deadline - now; //倒计时总秒数量
-    function timer(intDiff) {
-        window.setInterval(function () {
-            var day = 0,
-                hour = 0,
-                minute = 0,
-                second = 0;//时间默认值
-            if (intDiff > 0) {
-                day = Math.floor(intDiff / (60 * 60 * 24));
-                hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
-                minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
-                second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
-            }
-            if (minute <= 9) minute = '0' + minute;
-            if (second <= 9) second = '0' + second;
-            $('#deadline').html(day + "天" + hour + '时' + minute + '分' + second + '秒');
-            intDiff--;
-            if (intDiff === 0) {
-                var btn = $('#deadline_button');
-                btn.html("立即开始！").removeClass("weui-btn_disabled");
-            }
-        }, 1000);
-    }
-
-    $(function () {
-        timer(intDiff);
-    });
+    <jsp:include page="foot.jsp"></jsp:include>
 
 
-    function hidden_down(obj, hiddenid) {
-        if (document.getElementById(hiddenid).style.display == 'none') {
-            obj.className = 'fa fa-angle-up';
-            document.getElementById(hiddenid).style.display = 'block';
-        } else {
-            obj.className = 'fa fa-angle-down';
-            document.getElementById(hiddenid).style.display = 'none';
-        }
-    }
-
-
-</script>
 <!--下拉刷新-->
 <script>
     $(document.body).pullToRefresh().on("pull-to-refresh", function () {
