@@ -20,14 +20,8 @@
     <link rel="stylesheet" href="css/jquery-weui.1.0.1.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>积分兑换</title>
+    <title>文体培训班</title>
     <style>
-        .fenge {
-            padding: 1px;
-            border-left: 1px solid #c7c7c7;
-            font-size: 0;
-        }
-
         body {
             height: auto;
         }
@@ -37,36 +31,32 @@
             overflow: hidden;
             background-color: white;
             margin-top: .5rem;
+            margin-bottom: .5rem;
         }
 
         .commodity_show_item {
+            font-size: 10px;
             position: relative;
             float: left;
-            width: 50%;
+            width: 33.33%;
             box-sizing: border-box;
             padding: 10px;
             text-align: center;
-            border: 1px solid #EFEFF4;
         }
 
         .commodity_show_item .div_img {
             height: 90px;
         }
 
-        .required_integral {
-            color: #ff8a00;
-        }
-
-        .small_header_flex {
-            margin-top: .3rem;
-            padding: .5rem;
-            background-color: white;
-            font-size: 20px;
-            display: flex;
-        }
-
         .small_header_flex a {
             color: black;
+        }
+
+        .div_hr {
+            background: linear-gradient(to left, #efefef, #b6b6b6, #efefef);
+            height: .1rem;
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -83,115 +73,101 @@
 
 <header class="bar bar-nav">
     <a href="javascript:history.back();" class="icon pull-left"><i class="iconfont icon-back"></i></a>
-    <h1 class="title">积分兑换</h1>
+    <h1 class="title">文体培训班</h1>
 </header>
 
 <!-- 主体内容 -->
 <div class="bar-content">
     <!--背景图片-->
     <div class="div_img" style="background-image:url('./images/temp/20177281101.jpg');"></div>
-    <!--积分与记录-->
-    <div class="small_header_flex">
-        <div class="weui-flex__item" style="text-align: center; display: inline;">
-            <a href="#">
-                <i class="fa fa-cny"></i>
-                积分 <i style="color: #ff0f0f; ">1200</i>
-            </a>
-        </div>
-        <span class="fenge"></span>
-        <div class="weui-flex__item open-popup" data-target="#show_detail" style="text-align: center">
-                <i class="fa fa-file-text-o"></i>
-                兑换记录
 
-        </div>
-    </div>
+    <!--分割线-->
+    <div class="div_hr"></div>
 
-    <!--商品-->
+    <!--培训班-->
     <div class="commodity_show">
-        <!--商品案例-->
+        <!--培训班案例-->
         <div class="commodity_show_item">
             <div class="div_img" onclick="window.open('#', '_self')"
                  style="background-image:url('./images/temp/banner1.jpg');">
             </div>
-            <p>多样屋兰花茶具</p>
-            <p class="required_integral">600 积分</p>
-            <a href="Redeem_desc.html" class="weui-btn weui-btn_mini weui-btn_primary">兑换</a>
+            <p>文体培训班</p>
+            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_warn">加入</a>
         </div>
 
         <div class="commodity_show_item">
             <div class="div_img" onclick="window.open('#', '_self')"
                  style="background-image:url('./images/temp/banner1.jpg');">
             </div>
-            <p>多样屋兰花茶具</p>
-            <p class="required_integral">600 积分</p>
-            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary">兑换</a>
+            <p>文体培训班</p>
+            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_warn">加入</a>
         </div>
         <div class="commodity_show_item">
             <div class="div_img" onclick="window.open('#', '_self')"
                  style="background-image:url('./images/temp/banner1.jpg');">
             </div>
-            <p>多样屋兰花茶具</p>
-            <p class="required_integral">600 积分</p>
-            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary">兑换</a>
+            <p>文体培训班</p>
+            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_warn">加入</a>
         </div>
-
         <div class="commodity_show_item">
             <div class="div_img" onclick="window.open('#', '_self')"
                  style="background-image:url('./images/temp/banner1.jpg');">
             </div>
-            <p>多样屋兰花茶具</p>
-            <p class="required_integral">600 积分</p>
-            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary">兑换</a>
+            <p>文体培训班</p>
+            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_warn">加入</a>
         </div>
-
+        <div class="commodity_show_item">
+            <div class="div_img" onclick="window.open('#', '_self')"
+                 style="background-image:url('./images/temp/banner1.jpg');">
+            </div>
+            <p>文体培训班</p>
+            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_warn">加入</a>
+        </div>
+        <div class="commodity_show_item">
+            <div class="div_img" onclick="window.open('#', '_self')"
+                 style="background-image:url('./images/temp/banner2.jpg');">
+            </div>
+            <p>教职工合唱团</p>
+            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_warn">加入</a>
+        </div>
         <div class="commodity_show_item">
             <div class="div_img" onclick="window.open('#', '_self')"
                  style="background-image:url('./images/temp/20177281101.jpg');">
             </div>
-            <p>多样屋兰花茶具</p>
-            <p class="required_integral">600 积分</p>
-            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary">兑换</a>
+            <p>文体培训班</p>
+            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_warn">加入</a>
         </div>
-
         <div class="commodity_show_item">
             <div class="div_img" onclick="window.open('#', '_self')"
                  style="background-image:url('./images/temp/llg.jpg');">
             </div>
-            <p>多样屋兰花茶具</p>
-            <p class="required_integral">600 积分</p>
-            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary">兑换</a>
+            <p>文体培训班</p>
+            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_warn">加入</a>
         </div>
-
     </div>
 
-    <div id="show_detail" class="weui-popup__container popup-bottom">
+    <!--报名须知-->
+    <div id="rulers" class="weui-popup__container popup-bottom">
         <div class="weui-popup__overlay"></div>
         <div class="weui-popup__modal">
-            <div class="weui-cells">
-                <div class="weui-cell">
-                    <div class="weui-cell__bd">
-                        <p>兑换时间</p>
-                    </div>
-                    <div class="weui-cell__ft">说明</div>
+            <div class="weui-cells__ruler">
+                <h3>报名须知</h3>
+                <p>规则一</p>
+                <p>规则二</p>
+                <p>规则三</p>
+                <p>规则四</p>
+                <div style="padding: 15px">
+                    <a class="weui-btn weui-btn_primary close-popup">关闭页面</a>
                 </div>
-
-                <div class="weui-cell">
-                    <div class="weui-cell__bd">
-                        <p>2014-5-6</p>
-                    </div>
-                    <div class="weui-cell__ft">兑换一个</div>
-                </div>
-
-                <div class="weui-cell">
-                    <div class="weui-cell__bd">
-                        <p>2014-5-6</p>
-                    </div>
-                    <div class="weui-cell__ft">兑换一个</div>
-                </div>
-
-                <a class="weui-btn weui-btn_primary close-popup">关闭页面</a>
             </div>
         </div>
+    </div>
+
+    <div class="weui-footer open-popup" data-target="#rulers">
+        <p class="weui-footer__links">
+            <a class="weui-footer__link" style="border:1px solid; border-radius:5px; padding: 0px 6px">报名须知</a>
+        </p>
+        <p class="weui-footer__text">ECUST.com</p>
     </div>
 
 </div>
@@ -246,6 +222,7 @@
             document.getElementById(hiddenid).style.display = 'none';
         }
     }
+
 
 </script>
 <!--下拉刷新-->
