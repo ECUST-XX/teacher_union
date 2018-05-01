@@ -21,7 +21,7 @@
 </head>
 <body ontouchstart="">
   <header class="bar bar-nav">
-    <a href="user_center.html" class="icon pull-left"><i class="iconfont icon-back"></i></a>
+    <a href="user_center.jsp" class="icon pull-left"><i class="iconfont icon-back"></i></a>
     <h1 class="title">申请信息查看</h1>
   </header>
   
@@ -89,7 +89,7 @@
           <p class="c6">2017-02-09 13:26</p>
         </div>
       </div></div>
-      <a class="weui-cell weui-cell_access" href="progress.html">
+      <a class="weui-cell weui-cell_access" href="progress.jsp">
         <div class="weui-cell__bd">
           <p class="cred">查看进度</p>
         </div>
@@ -136,7 +136,7 @@
           <p class="c6">2017-02-09 13:26</p>
         </div>
       </div></div>
-      <a class="weui-cell weui-cell_access" href="progress.html">
+      <a class="weui-cell weui-cell_access" href="progress.jsp">
         <div class="weui-cell__bd">
           <p class="cred">查看进度</p>
         </div>
@@ -183,7 +183,7 @@
           <p class="c6">2017-02-09 13:26</p>
         </div>
       </div></div>
-      <a class="weui-cell weui-cell_access" href="progress.html">
+      <a class="weui-cell weui-cell_access" href="progress.jsp">
         <div class="weui-cell__bd">
           <p class="cred">查看进度</p>
         </div>

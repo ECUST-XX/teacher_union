@@ -94,7 +94,7 @@
                 </div>
             </a>
         </div>
-        <a class="weui-cell weui-cell_access" href="form.html">
+        <a class="weui-cell weui-cell_access" href="form.jsp">
             <div class="weui-cell__bd">
                 <p>我的兑换</p>
             </div>
@@ -123,7 +123,7 @@
             <div class="weui-cell__ft">
             </div>
         </a>
-        <a class="weui-cell weui-cell_access" href="order.html">
+        <a class="weui-cell weui-cell_access" href="order.jsp">
             <div class="weui-cell__bd">
                 <p>我的援助申请</p>
             </div>
@@ -154,7 +154,7 @@
         </div>
         <p class="weui-tabbar__label">首页</p>
     </a>
-    <a href="activity_center.html" class="weui-tabbar__item">
+    <a href="activity_center.jsp" class="weui-tabbar__item">
         <div class="weui-tabbar__icon">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-huodong"></use>
@@ -162,7 +162,7 @@
         </div>
         <p class="weui-tabbar__label">活动专区</p>
     </a>
-    <a href="service_centre.html" class="weui-tabbar__item">
+    <a href="service_centre.jsp" class="weui-tabbar__item">
         <div class="weui-tabbar__icon">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-fuwu"></use>
@@ -170,7 +170,7 @@
         </div>
         <p class="weui-tabbar__label">服务大厅</p>
     </a>
-    <a href="user_center.html" class="weui-tabbar__item  weui-bar__item--on">
+    <a href="user_center.jsp" class="weui-tabbar__item  weui-bar__item--on">
         <div class="weui-tabbar__icon">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-huiyuan"></use>

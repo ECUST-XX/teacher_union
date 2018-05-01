@@ -115,7 +115,7 @@
             </div>
             <p>多样屋兰花茶具</p>
             <p class="required_integral">600 积分</p>
-            <a href="Redeem_desc.html" class="weui-btn weui-btn_mini weui-btn_primary">兑换</a>
+            <a href="Redeem_desc.jsp" class="weui-btn weui-btn_mini weui-btn_primary">兑换</a>
         </div>
 
         <div class="commodity_show_item">

@@ -128,7 +128,7 @@
                 我要入会
             </p>
         </a>
-        <a href="contack_we.html" class="weui-grid js_grid">
+        <a href="contack_we.jsp" class="weui-grid js_grid">
             <div class="weui-grid__icon">
                 <img src="./images/service_centre/LXWM.png" alt="">
             </div>
@@ -151,7 +151,7 @@
         </div>
         <p class="weui-tabbar__label">首页</p>
     </a>
-    <a href="activity_center.html" class="weui-tabbar__item">
+    <a href="activity_center.jsp" class="weui-tabbar__item">
         <div class="weui-tabbar__icon">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-huodong"></use>
@@ -159,7 +159,7 @@
         </div>
         <p class="weui-tabbar__label">活动专区</p>
     </a>
-    <a href="service_centre.html" class="weui-tabbar__item weui-bar__item--on">
+    <a href="service_centre.jsp" class="weui-tabbar__item weui-bar__item--on">
         <div class="weui-tabbar__icon">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-fuwu"></use>
@@ -167,7 +167,7 @@
         </div>
         <p class="weui-tabbar__label">服务大厅</p>
     </a>
-    <a href="user_center.html" class="weui-tabbar__item">
+    <a href="user_center.jsp" class="weui-tabbar__item">
         <div class="weui-tabbar__icon">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-huiyuan"></use>
